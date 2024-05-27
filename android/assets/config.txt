@@ -1,0 +1,9 @@
+TODO-ADD-URL
+80
+https://coop-game-api-cors-v2-a3hddi81.ew.gateway.dev/Games
+https://coop-game-api-cors-v2-a3hddi81.ew.gateway.dev/Levels
+https://coop-game-api-cors-v2-a3hddi81.ew.gateway.dev/LevelStart
+https://coop-game-api-cors-v2-a3hddi81.ew.gateway.dev/Users
+https://coop-game-api-cors-v2-a3hddi81.ew.gateway.dev/getuser
+https://coop-game-api-cors-v2-a3hddi81.ew.gateway.dev/RegisterUser
+https://coop-game-api-cors-v2-a3hddi81.ew.gateway.dev/getwebsitestatus

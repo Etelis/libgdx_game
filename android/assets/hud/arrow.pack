@@ -1,0 +1,115 @@
+
+arrow.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+arrow
+  rotate: false
+  xy: 1, 809
+  size: 550, 200
+  orig: 550, 200
+  offset: 0, 0
+  index: 1
+arrow
+  rotate: false
+  xy: 1, 809
+  size: 550, 200
+  orig: 550, 200
+  offset: 0, 0
+  index: 15
+arrow
+  rotate: false
+  xy: 1, 607
+  size: 550, 200
+  orig: 550, 200
+  offset: 0, 0
+  index: 10
+arrow
+  rotate: false
+  xy: 1, 607
+  size: 550, 200
+  orig: 550, 200
+  offset: 0, 0
+  index: 6
+arrow
+  rotate: false
+  xy: 1, 405
+  size: 550, 200
+  orig: 550, 200
+  offset: 0, 0
+  index: 11
+arrow
+  rotate: false
+  xy: 1, 405
+  size: 550, 200
+  orig: 550, 200
+  offset: 0, 0
+  index: 5
+arrow
+  rotate: false
+  xy: 1, 203
+  size: 550, 200
+  orig: 550, 200
+  offset: 0, 0
+  index: 12
+arrow
+  rotate: false
+  xy: 1, 203
+  size: 550, 200
+  orig: 550, 200
+  offset: 0, 0
+  index: 4
+arrow
+  rotate: false
+  xy: 1, 1
+  size: 550, 200
+  orig: 550, 200
+  offset: 0, 0
+  index: 13
+arrow
+  rotate: false
+  xy: 1, 1
+  size: 550, 200
+  orig: 550, 200
+  offset: 0, 0
+  index: 3
+
+arrow2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+arrow
+  rotate: false
+  xy: 1, 405
+  size: 550, 200
+  orig: 550, 200
+  offset: 0, 0
+  index: 14
+arrow
+  rotate: false
+  xy: 1, 405
+  size: 550, 200
+  orig: 550, 200
+  offset: 0, 0
+  index: 2
+arrow
+  rotate: false
+  xy: 1, 203
+  size: 550, 200
+  orig: 550, 200
+  offset: 0, 0
+  index: 7
+arrow
+  rotate: false
+  xy: 1, 203
+  size: 550, 200
+  orig: 550, 200
+  offset: 0, 0
+  index: 9
+arrow
+  rotate: false
+  xy: 1, 1
+  size: 550, 200
+  orig: 550, 200
+  offset: 0, 0
+  index: 8

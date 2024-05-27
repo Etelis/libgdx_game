@@ -1,0 +1,61 @@
+
+gender_choose.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+human_boy_off
+  rotate: false
+  xy: 1, 539
+  size: 282, 267
+  orig: 282, 267
+  offset: 0, 0
+  index: -1
+human_boy_on
+  rotate: false
+  xy: 1, 270
+  size: 282, 267
+  orig: 282, 267
+  offset: 0, 0
+  index: -1
+human_girl_off
+  rotate: false
+  xy: 285, 539
+  size: 282, 267
+  orig: 282, 267
+  offset: 0, 0
+  index: -1
+human_girl_on
+  rotate: false
+  xy: 1, 1
+  size: 282, 267
+  orig: 282, 267
+  offset: 0, 0
+  index: -1
+virtual_boy_off
+  rotate: false
+  xy: 285, 270
+  size: 282, 267
+  orig: 282, 267
+  offset: 0, 0
+  index: -1
+virtual_boy_on
+  rotate: false
+  xy: 569, 539
+  size: 282, 267
+  orig: 282, 267
+  offset: 0, 0
+  index: -1
+virtual_girl_off
+  rotate: false
+  xy: 285, 1
+  size: 282, 267
+  orig: 282, 267
+  offset: 0, 0
+  index: -1
+virtual_girl_on
+  rotate: false
+  xy: 569, 270
+  size: 282, 267
+  orig: 282, 267
+  offset: 0, 0
+  index: -1

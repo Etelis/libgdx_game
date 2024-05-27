@@ -1,0 +1,26 @@
+
+girl_pack.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Girl_Jump
+  rotate: false
+  xy: 0, 512
+  size: 1024, 256
+  orig: 1024, 256
+  offset: 0, 0
+  index: -1
+Girl_Walk
+  rotate: false
+  xy: 0, 256
+  size: 1024, 256
+  orig: 1024, 256
+  offset: 0, 0
+  index: -1
+Girl_Idle
+  rotate: false
+  xy: 0, 0
+  size: 512, 256
+  orig: 512, 256
+  offset: 0, 0
+  index: -1

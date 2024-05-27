@@ -1,0 +1,8 @@
+{
+  "data_storing": true,
+  "cheats": {
+    "clock": true,
+    "locked_levels_available": false,
+    "back_buttons": true
+  }
+}

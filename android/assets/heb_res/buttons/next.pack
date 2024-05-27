@@ -1,0 +1,31 @@
+
+next.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+1
+  rotate: false
+  xy: 1, 467
+  size: 543, 464
+  orig: 543, 464
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 1, 1
+  size: 543, 464
+  orig: 543, 464
+  offset: 0, 0
+  index: -1
+
+next2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+3
+  rotate: false
+  xy: 1, 1
+  size: 543, 464
+  orig: 543, 464
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,72 @@
+
+ice_cube_throwing.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+1
+  rotate: false
+  xy: 1, 1
+  size: 995, 818
+  orig: 995, 818
+  offset: 0, 0
+  index: -1
+
+ice_cube_throwing2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+2
+  rotate: false
+  xy: 1, 1
+  size: 995, 818
+  orig: 995, 818
+  offset: 0, 0
+  index: -1
+
+ice_cube_throwing3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+3
+  rotate: false
+  xy: 1, 1
+  size: 995, 818
+  orig: 995, 818
+  offset: 0, 0
+  index: -1
+
+ice_cube_throwing4.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+4
+  rotate: false
+  xy: 1, 1
+  size: 995, 818
+  orig: 995, 818
+  offset: 0, 0
+  index: -1
+
+ice_cube_throwing5.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+5
+  rotate: false
+  xy: 1, 1
+  size: 995, 818
+  orig: 995, 818
+  offset: 0, 0
+  index: -1
+
+ice_cube_throwing6.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+6
+  rotate: false
+  xy: 1, 1
+  size: 995, 818
+  orig: 995, 818
+  offset: 0, 0
+  index: -1
