@@ -30,6 +30,13 @@ jobs:
         version: 'latest'
         export_default_credentials: true
 
+    - name: Set up Android SDK
+      uses: android-actions/setup-android@v2
+      with:
+        api-levels: '30'
+        build-tools: '30.0.3'
+        ndk: '21.4.7075529'
+
     - name: Create necessary directories in deploy
       run: |
         mkdir -p deploy/android
@@ -70,10 +77,13 @@ jobs:
         echo '!gradle/wrapper/gradle-wrapper.jar' >> deploy/.gcloudignore
         echo '!gradle/wrapper/gradle-wrapper.properties' >> deploy/.gcloudignore
 
+    - name: Create local.properties file
+      run: echo "sdk.dir=/usr/local/lib/android/sdk" > deploy/android/local.properties
+
     - name: Set version
       id: vars
       run: echo "VERSION=$(date +%Y%m%d%H%M%S)-${GITHUB_SHA::7}" >> $GITHUB_ENV
 
     - name: Deploy to App Engine
       run: |
-        gcloud app deploy app.yaml --quiet --version=$VERSION --no-promote --verbosity=debug
+        gcloud app deploy deploy/app.yaml --quiet --version=$VERSION --no-promote
