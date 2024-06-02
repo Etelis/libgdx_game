@@ -30,6 +30,13 @@ jobs:
         version: 'latest'
         export_default_credentials: true
 
+    - name: Create necessary directories in deploy
+      run: |
+        mkdir -p deploy/core
+        mkdir -p deploy/android
+        mkdir -p deploy/desktop
+        mkdir -p deploy/html
+
     - name: Copy necessary files to deploy directory
       run: |
         cp -r core/* deploy/core/
@@ -41,7 +48,7 @@ jobs:
         cp gradlew deploy/
         cp gradlew.bat deploy/
         cp settings.gradle deploy/
-      
+
     - name: Create .gcloudignore file
       run: |
         echo '*' > deploy/.gcloudignore
