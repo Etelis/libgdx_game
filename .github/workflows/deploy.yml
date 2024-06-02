@@ -43,7 +43,7 @@ jobs:
       env:
         GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
       run: |
-        echo "${{ secrets.GCP_SA_KEY }}" > gcp-key.json
+        printf '%s' "${{ secrets.GCP_SA_KEY }}" > gcp-key.json
         gcloud auth activate-service-account --key-file=gcp-key.json
         gsutil cp android/app/build/outputs/apk/release/app-release.apk gs://libgdx_game/builds/app-release-$(date +%Y%m%d%H%M%S).apk
 
@@ -62,7 +62,7 @@ jobs:
       env:
         GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
       run: |
-        echo "${{ secrets.GCP_SA_KEY }}" > gcp-key.json
+        printf '%s' "${{ secrets.GCP_SA_KEY }}" > gcp-key.json
         gcloud auth activate-service-account --key-file=gcp-key.json
         gsutil cp $(gsutil ls gs://libgdx_game/builds | sort | tail -n 1) .
 
