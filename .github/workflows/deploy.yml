@@ -50,6 +50,3 @@ jobs:
         project_id: ${{ secrets.GCP_PROJECT_ID }}
         deliverables: app.yaml
         promote: true
-
-      run: |
-        gcloud app deploy app.yaml --quiet --version=$VERSION --no-promote --verbosity=debug
