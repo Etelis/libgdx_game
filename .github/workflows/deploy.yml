@@ -27,15 +27,15 @@ jobs:
         version: 'latest'
         export_default_credentials: true
 
-    - name: Use Docker image with Android SDK
+    - name: Use custom Docker image with Android SDK
       run: |
         docker run --rm \
           -v ${{ github.workspace }}:/workspace \
           -w /workspace \
-          reactnativecommunity/react-native-android \
+          dockerdockie/android-sdk:custom \
           /bin/bash -c "\
             chmod +x ./gradlew && \
-            echo 'sdk.dir=/opt/android/sdk' > android/local.properties && \
+            echo 'sdk.dir=/usr/local/lib/android/sdk' > android/local.properties && \
             ./gradlew clean assemble -x test --build-cache --quiet"
 
     - name: Deploy to App Engine
