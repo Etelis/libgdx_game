@@ -38,11 +38,19 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y wget unzip
         wget https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip -O commandlinetools.zip
-        sudo mkdir -p /usr/local/lib/android/sdk
-        sudo unzip commandlinetools.zip -d /usr/local/lib/android/sdk/cmdline-tools
-        sudo mv /usr/local/lib/android/sdk/cmdline-tools/cmdline-tools /usr/local/lib/android/sdk/cmdline-tools/latest
+        sudo mkdir -p /usr/local/lib/android/sdk/cmdline-tools/latest
+        sudo unzip commandlinetools.zip -d /usr/local/lib/android/sdk/cmdline-tools/latest
         yes | sudo /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager --licenses
         sudo /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager "platform-tools" "build-tools;30.0.3" "platforms;android-30"
+    
+    - name: Verify SDK installation
+      run: |
+        echo "Listing contents of /usr/local/lib/android/sdk:"
+        ls -al /usr/local/lib/android/sdk
+        echo "Listing contents of /usr/local/lib/android/sdk/cmdline-tools:"
+        ls -al /usr/local/lib/android/sdk/cmdline-tools
+        echo "Listing contents of /usr/local/lib/android/sdk/cmdline-tools/latest:"
+        ls -al /usr/local/lib/android/sdk/cmdline-tools/latest
 
     - name: Create local.properties file
       run: echo "sdk.dir=/usr/local/lib/android/sdk" > local.properties
