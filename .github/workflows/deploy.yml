@@ -63,6 +63,11 @@ jobs:
         echo '!gradlew.bat' >> deploy/.gcloudignore
         echo '!settings.gradle' >> deploy/.gcloudignore
 
+    - name: List files in deploy directory
+      run: |
+        echo "Files in deploy directory:"
+        ls -R deploy
+
     - name: Set version
       id: vars
       run: echo "VERSION=$(date +%Y%m%d%H%M%S)-${GITHUB_SHA::7}" >> $GITHUB_ENV
