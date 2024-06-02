@@ -34,6 +34,7 @@ jobs:
           -w /workspace \
           reactnativecommunity/react-native-android \
           /bin/bash -c "\
+            chmod +x ./gradlew && \
             echo 'sdk.dir=/opt/android/sdk' > android/local.properties && \
             ./gradlew clean assemble -x test --build-cache --quiet"
 
