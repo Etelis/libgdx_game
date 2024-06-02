@@ -36,12 +36,13 @@ jobs:
         api-levels: '30'
         build-tools: '30.0.3'
         ndk: '21.4.7075529'
+        install-path: '/opt/android-sdk'
 
     - name: Create local.properties file
-      run: echo "sdk.dir=/usr/local/lib/android/sdk" > local.properties
+      run: echo "sdk.dir=/opt/android-sdk" > local.properties
 
     - name: Export ANDROID_SDK_ROOT
-      run: echo "ANDROID_SDK_ROOT=/usr/local/lib/android/sdk" >> $GITHUB_ENV
+      run: echo "ANDROID_SDK_ROOT=/opt/android-sdk" >> $GITHUB_ENV
 
     - name: Set version
       id: vars
