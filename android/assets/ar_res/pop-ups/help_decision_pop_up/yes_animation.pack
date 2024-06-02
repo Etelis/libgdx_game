@@ -1,0 +1,96 @@
+
+yes_animation.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Yes
+  rotate: false
+  xy: 1, 809
+  size: 400, 200
+  orig: 400, 200
+  offset: 0, 0
+  index: 1
+Yes
+  rotate: false
+  xy: 1, 809
+  size: 400, 200
+  orig: 400, 200
+  offset: 0, 0
+  index: 13
+Yes
+  rotate: false
+  xy: 1, 607
+  size: 400, 200
+  orig: 400, 200
+  offset: 0, 0
+  index: 10
+Yes
+  rotate: false
+  xy: 403, 809
+  size: 400, 200
+  orig: 400, 200
+  offset: 0, 0
+  index: 11
+Yes
+  rotate: false
+  xy: 403, 809
+  size: 400, 200
+  orig: 400, 200
+  offset: 0, 0
+  index: 3
+Yes
+  rotate: false
+  xy: 1, 405
+  size: 400, 200
+  orig: 400, 200
+  offset: 0, 0
+  index: 12
+Yes
+  rotate: false
+  xy: 403, 607
+  size: 400, 200
+  orig: 400, 200
+  offset: 0, 0
+  index: 2
+Yes
+  rotate: false
+  xy: 1, 203
+  size: 400, 200
+  orig: 400, 200
+  offset: 0, 0
+  index: 4
+Yes
+  rotate: false
+  xy: 403, 405
+  size: 400, 200
+  orig: 400, 200
+  offset: 0, 0
+  index: 5
+Yes
+  rotate: false
+  xy: 403, 405
+  size: 400, 200
+  orig: 400, 200
+  offset: 0, 0
+  index: 9
+Yes
+  rotate: false
+  xy: 1, 1
+  size: 400, 200
+  orig: 400, 200
+  offset: 0, 0
+  index: 6
+Yes
+  rotate: false
+  xy: 403, 203
+  size: 400, 200
+  orig: 400, 200
+  offset: 0, 0
+  index: 7
+Yes
+  rotate: false
+  xy: 403, 1
+  size: 400, 200
+  orig: 400, 200
+  offset: 0, 0
+  index: 8

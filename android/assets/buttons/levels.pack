@@ -1,0 +1,57 @@
+
+levels.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+1
+  rotate: false
+  xy: 1, 803
+  size: 1280, 800
+  orig: 1280, 800
+  offset: 0, 0
+  index: -1
+2
+  rotate: false
+  xy: 1, 1
+  size: 1280, 800
+  orig: 1280, 800
+  offset: 0, 0
+  index: -1
+
+levels2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+3
+  rotate: false
+  xy: 1, 803
+  size: 1280, 800
+  orig: 1280, 800
+  offset: 0, 0
+  index: -1
+4
+  rotate: false
+  xy: 1, 1
+  size: 1280, 800
+  orig: 1280, 800
+  offset: 0, 0
+  index: -1
+
+levels3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+5
+  rotate: false
+  xy: 1, 803
+  size: 1280, 800
+  orig: 1280, 800
+  offset: 0, 0
+  index: -1
+6
+  rotate: false
+  xy: 1, 1
+  size: 1280, 800
+  orig: 1280, 800
+  offset: 0, 0
+  index: -1

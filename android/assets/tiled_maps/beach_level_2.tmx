@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.1" orientation="orthogonal" renderorder="right-down" width="30" height="18" tilewidth="64" tileheight="64" nextobjectid="467">
+ <tileset firstgid="1" name="regular_background" tilewidth="64" tileheight="64" tilecount="540" columns="30">
+  <image source="../Tiled/regular_background.png" width="1920" height="1152"/>
+ </tileset>
+ <tileset firstgid="541" name="ice_background" tilewidth="64" tileheight="64" tilecount="540" columns="30">
+  <image source="../Tiled/ice_background.png" width="1920" height="1152"/>
+ </tileset>
+ <tileset firstgid="1081" name="coin" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="../Tiled/coin.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="1082" name="ice_obstacle" tilewidth="64" tileheight="64" tilecount="9" columns="3">
+  <image source="../Tiled/ice_obstacle.png" width="192" height="192"/>
+ </tileset>
+ <tileset firstgid="1091" name="virtual_coin" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="../Tiled/virtual_coin.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="1092" name="regular_obstacle" tilewidth="64" tileheight="64" tilecount="9" columns="3">
+  <image source="../Tiled/regular_obstacle.png" width="192" height="192"/>
+ </tileset>
+ <tileset firstgid="1101" name="elements" tilewidth="64" tileheight="64" tilecount="21" columns="0">
+  <tile id="0">
+   <image width="64" height="64" source="../Tiled/1.png"/>
+  </tile>
+  <tile id="1">
+   <image width="64" height="64" source="../Tiled/2.png"/>
+  </tile>
+  <tile id="2">
+   <image width="64" height="64" source="../Tiled/3.png"/>
+  </tile>
+  <tile id="3">
+   <image width="64" height="64" source="../Tiled/4.png"/>
+  </tile>
+  <tile id="4">
+   <image width="64" height="64" source="../Tiled/5.png"/>
+  </tile>
+  <tile id="5">
+   <image width="64" height="64" source="../Tiled/6.png"/>
+  </tile>
+  <tile id="6">
+   <image width="64" height="64" source="../Tiled/g1.png"/>
+  </tile>
+  <tile id="7">
+   <image width="64" height="64" source="../Tiled/g2.png"/>
+  </tile>
+  <tile id="8">
+   <image width="64" height="64" source="../Tiled/g3.png"/>
+  </tile>
+  <tile id="9">
+   <image width="64" height="64" source="../Tiled/Ground (1).png"/>
+  </tile>
+  <tile id="10">
+   <image width="64" height="64" source="../Tiled/Ground (2) copy.png"/>
+  </tile>
+  <tile id="11">
+   <image width="64" height="64" source="../Tiled/Ground (3) copy.png"/>
+  </tile>
+  <tile id="12">
+   <image width="64" height="64" source="../Tiled/Ground (4) copy.png"/>
+  </tile>
+  <tile id="13">
+   <image width="64" height="64" source="../Tiled/Ground (5) copy.png"/>
+  </tile>
+  <tile id="14">
+   <image width="64" height="64" source="../Tiled/Ground (6) copy.png"/>
+  </tile>
+  <tile id="15">
+   <image width="64" height="64" source="../Tiled/Ground (19) copy.png"/>
+  </tile>
+  <tile id="16">
+   <image width="64" height="64" source="../Tiled/Ground (20) copy.png"/>
+  </tile>
+  <tile id="17">
+   <image width="64" height="64" source="../Tiled/Ground (21) copy.png"/>
+  </tile>
+  <tile id="19">
+   <image width="64" height="64" source="../Tiled/mid3.png"/>
+  </tile>
+  <tile id="20">
+   <image width="64" height="64" source="../Tiled/regular_hud_color.png"/>
+  </tile>
+  <tile id="23">
+   <image width="64" height="64" source="../Tiled/ice_hud_color.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="1125" name="Crate1" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="../Tiled/Crate.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="1126" name="Crate2" tilewidth="64" tileheight="64" tilecount="4" columns="2">
+  <image source="../Tiled/Crate2.png" width="128" height="128"/>
+ </tileset>
+ <tileset firstgid="1130" name="Crate3" tilewidth="64" tileheight="64" tilecount="9" columns="3">
+  <image source="../Tiled/Crate3.png" width="192" height="192"/>
+ </tileset>
+ <tileset firstgid="1139" name="ice_obstacle_animation" tilewidth="192" tileheight="192" tilecount="3" columns="0">
+  <tile id="0">
+   <image width="192" height="192" source="../Tiled/ICE ANIMATION/1.png"/>
+  </tile>
+  <tile id="1">
+   <image width="192" height="192" source="../Tiled/ICE ANIMATION/2.png"/>
+  </tile>
+  <tile id="2">
+   <image width="192" height="192" source="../Tiled/ICE ANIMATION/3.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="1142" name="ice_elements" tilewidth="64" tileheight="64" tilecount="1024" columns="64">
+  <image source="../Tiled/ice.png" width="4096" height="1024"/>
+ </tileset>
+ <tileset firstgid="2166" name="locked_coin" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="../Tiled/coins3.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="2167" name="locked_virtual_coin" tilewidth="64" tileheight="64" tilecount="1" columns="1">
+  <image source="../Tiled/virtual_coins3.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="2168" name="colored_forest_bg" tilewidth="64" tileheight="64" tilecount="540" columns="30">
+  <image source="../Tiled/colored_forest_bg.png" width="1920" height="1152"/>
+ </tileset>
+ <tileset firstgid="2708" name="beach-bg2" tilewidth="64" tileheight="64" tilecount="540" columns="30">
+  <image source="../Tiled/beach-bg2.png" width="1920" height="1152"/>
+ </tileset>
+ <layer name="background" width="30" height="18">
+  <data encoding="csv">
+2708,2709,2710,2711,2712,2713,2714,2715,2716,2717,2718,2719,2720,2721,2722,2723,2724,2725,2726,2727,2728,2729,2730,2731,2732,2733,2734,2735,2736,2737,
+2738,2739,2740,2741,2742,2743,2744,2745,2746,2747,2748,2749,2750,2751,2752,2753,2754,2755,2756,2757,2758,2759,2760,2761,2762,2763,2764,2765,2766,2767,
+2768,2769,2770,2771,2772,2773,2774,2775,2776,2777,2778,2779,2780,2781,2782,2783,2784,2785,2786,2787,2788,2789,2790,2791,2792,2793,2794,2795,2796,2797,
+2798,2799,2800,2801,2802,2803,2804,2805,2806,2807,2808,2809,2810,2811,2812,2813,2814,2815,2816,2817,2818,2819,2820,2821,2822,2823,2824,2825,2826,2827,
+2828,2829,2830,2831,2832,2833,2834,2835,2836,2837,2838,2839,2840,2841,2842,2843,2844,2845,2846,2847,2848,2849,2850,2851,2852,2853,2854,2855,2856,2857,
+2858,2859,2860,2861,2862,2863,2864,2865,2866,2867,2868,2869,2870,2871,2872,2873,2874,2875,2876,2877,2878,2879,2880,2881,2882,2883,2884,2885,2886,2887,
+2888,2889,2890,2891,2892,2893,2894,2895,2896,2897,2898,2899,2900,2901,2902,2903,2904,2905,2906,2907,2908,2909,2910,2911,2912,2913,2914,2915,2916,2917,
+2918,2919,2920,2921,2922,2923,2924,2925,2926,2927,2928,2929,2930,2931,2932,2933,2934,2935,2936,2937,2938,2939,2940,2941,2942,2943,2944,2945,2946,2947,
+2948,2949,2950,2951,2952,2953,2954,2955,2956,2957,2958,2959,2960,2961,2962,2963,2964,2965,2966,2967,2968,2969,2970,2971,2972,2973,2974,2975,2976,2977,
+2978,2979,2980,2981,2982,2983,2984,2985,2986,2987,2988,2989,2990,2991,2992,2993,2994,2995,2996,2997,2998,2999,3000,3001,3002,3003,3004,3005,3006,3007,
+3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022,3023,3024,3025,3026,3027,3028,3029,3030,3031,3032,3033,3034,3035,3036,3037,
+3038,3039,3040,3041,3042,3043,3044,3045,3046,3047,3048,3049,3050,3051,3052,3053,3054,3055,3056,3057,3058,3059,3060,3061,3062,3063,3064,3065,3066,3067,
+3068,3069,3070,3071,3072,3073,3074,3075,3076,3077,3078,3079,3080,3081,3082,3083,3084,3085,3086,3087,3088,3089,3090,3091,3092,3093,3094,3095,3096,3097,
+3098,3099,3100,3101,3102,3103,3104,3105,3106,3107,3108,3109,3110,3111,3112,3113,3114,3115,3116,3117,3118,3119,3120,3121,3122,3123,3124,3125,3126,3127,
+3128,3129,3130,3131,3132,3133,3134,3135,3136,3137,3138,3139,3140,3141,3142,3143,3144,3145,3146,3147,3148,3149,3150,3151,3152,3153,3154,3155,3156,3157,
+3158,3159,3160,3161,3162,3163,3164,3165,3166,3167,3168,3169,3170,3171,3172,3173,3174,3175,3176,3177,3178,3179,3180,3181,3182,3183,3184,3185,3186,3187,
+3188,3189,3190,3191,3192,3193,3194,3195,3196,3197,3198,3199,3200,3201,3202,3203,3204,3205,3206,3207,3208,3209,3210,3211,3212,3213,3214,3215,3216,3217,
+3218,3219,3220,3221,3222,3223,3224,3225,3226,3227,3228,3229,3230,3231,3232,3233,3234,3235,3236,3237,3238,3239,3240,3241,3242,3243,3244,3245,3246,3247
+</data>
+ </layer>
+ <layer name="graphic_elements" width="30" height="18">
+  <data encoding="csv">
+2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,
+2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,2169,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,2681,2681,2681,2681,2681,0,0,0,0,0,0,0,0,0,0,0,0,0,2681,2681,2681,2681,2681,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,2684,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="collectable_elements" width="30" height="18">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,1081,0,0,0,0,0,0,0,0,1081,0,0,0,0,0,0,0,0,1081,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,1081,0,0,0,0,0,1081,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1092,1093,1094,0,0,0,0,0,0,0,1082,1083,1084,0,
+0,0,0,1081,0,1091,0,1081,0,1091,0,1081,0,1091,0,0,1095,2167,1097,0,0,1091,0,1081,0,0,1085,2166,1087,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1098,1099,1100,0,0,0,0,0,0,0,1088,1089,1090,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup name="ground">
+  <object id="169" x="1856" y="64" width="64" height="1088"/>
+  <object id="171" x="64" y="1088" width="1792" height="64"/>
+  <object id="175" x="0" y="0" width="1920" height="190"/>
+  <object id="177" x="0" y="64" width="64" height="1088"/>
+  <object id="381" x="1405.33" y="386" width="317.33" height="61.3333"/>
+  <object id="382" x="1.33333" y="644" width="1914" height="60"/>
+  <object id="466" x="255.335" y="385.333" width="317.33" height="61.3333"/>
+ </objectgroup>
+ <objectgroup name="iceObstacles">
+  <object id="434" x="1661" y="450" width="193" height="190"/>
+ </objectgroup>
+ <objectgroup name="natureObstacles">
+  <object id="456" x="1022" y="448" width="194" height="192"/>
+ </objectgroup>
+ <objectgroup name="coins">
+  <object id="407" x="1155" y="317.667" width="64" height="64"/>
+  <object id="416" x="956" y="256.666" width="64" height="64"/>
+  <object id="435" x="385.33" y="259.333" width="62.6667" height="64.6667"/>
+  <object id="452" x="1532.67" y="257" width="66.6667" height="61.3333"/>
+  <object id="454" x="764.667" y="320" width="65.3333" height="64"/>
+  <object id="457" x="1472" y="517.333" width="60" height="58.6667"/>
+  <object id="458" x="704" y="514.667" width="64" height="58.6667"/>
+  <object id="459" x="449.333" y="513.333" width="64" height="61.3333"/>
+  <object id="460" x="192" y="509.333" width="65.3333" height="65.3333"/>
+ </objectgroup>
+ <objectgroup name="virtualcoins" offsetx="0" offsety="2">
+  <object id="462" x="1346.67" y="511.333" width="60" height="61.3333"/>
+  <object id="463" x="830.667" y="510" width="68" height="61.3333"/>
+  <object id="464" x="572" y="508.667" width="69.3333" height="66.6667"/>
+  <object id="465" x="317.333" y="515.333" width="69.3333" height="60"/>
+ </objectgroup>
+ <objectgroup name="lockedCoins">
+  <object id="433" x="1727" y="510" width="62" height="63"/>
+ </objectgroup>
+ <objectgroup name="lockedVirtualCoins">
+  <object id="455" x="1088" y="513" width="65" height="62"/>
+ </objectgroup>
+ <objectgroup name="human_player">
+  <object id="449" x="514" y="580" width="61.3333" height="62.6667"/>
+ </objectgroup>
+ <objectgroup name="virtual_player">
+  <object id="450" x="1532.58" y="576.083" width="62.75" height="63.5833"/>
+ </objectgroup>
+</map>

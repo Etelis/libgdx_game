@@ -1,0 +1,33 @@
+
+can_you_help_me.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+instructions_left
+  rotate: false
+  xy: 1, 255
+  size: 299, 252
+  orig: 299, 252
+  offset: 0, 0
+  index: -1
+instructions_right
+  rotate: false
+  xy: 1, 1
+  size: 299, 252
+  orig: 299, 252
+  offset: 0, 0
+  index: -1
+standard_left
+  rotate: false
+  xy: 302, 255
+  size: 299, 252
+  orig: 299, 252
+  offset: 0, 0
+  index: -1
+standard_right
+  rotate: false
+  xy: 302, 1
+  size: 299, 252
+  orig: 299, 252
+  offset: 0, 0
+  index: -1

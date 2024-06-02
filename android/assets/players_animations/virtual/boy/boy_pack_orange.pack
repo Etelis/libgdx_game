@@ -1,0 +1,26 @@
+
+boy_pack_orange.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Boy_Jump
+  rotate: false
+  xy: 1, 259
+  size: 1024, 256
+  orig: 1024, 256
+  offset: 0, 0
+  index: -1
+Boy_Walk
+  rotate: false
+  xy: 1, 1
+  size: 1024, 256
+  orig: 1024, 256
+  offset: 0, 0
+  index: -1
+Boy_Idle
+  rotate: false
+  xy: 1027, 259
+  size: 512, 256
+  orig: 512, 256
+  offset: 0, 0
+  index: -1
