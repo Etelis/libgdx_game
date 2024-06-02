@@ -26,6 +26,10 @@ jobs:
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         project_id: ${{ secrets.GCP_PROJECT }}
 
+    - name: Set version
+      id: vars
+      run: echo "VERSION=$(date +%Y%m%d%H%M%S)-${GITHUB_SHA::7}" >> $GITHUB_ENV
+
     - name: Deploy to App Engine
       run: |
-        gcloud app deploy app.yaml --quiet
+        gcloud app deploy app.yaml --quiet --version=$VERSION --no-promote
