@@ -9,6 +9,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -20,9 +24,10 @@ jobs:
         distribution: 'adopt'
 
     - name: Setup GCloud Auth
-      uses: google-github-actions/auth@v0.4.0
+      uses: google-github-actions/auth@v2
       with:
-        credentials_json: ${{ secrets.GCP_SA_KEY }}
+        workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+        service_account: ${{ secrets.GCP_SERVICE_ACCOUNT }}
 
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@v0.2.1
@@ -30,24 +35,26 @@ jobs:
         version: 'latest'
         export_default_credentials: true
 
-    - name: Set up Android SDK
-      uses: android-actions/setup-android@v2
-      with:
-        api-levels: '30'
-        build-tools: '30.0.3'
-        ndk: '21.4.7075529'
-        install-path: '/opt/android-sdk'
+    - name: Install Android SDK and Tools
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget unzip
+        wget https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip -O commandlinetools.zip
+        sudo mkdir -p /usr/local/lib/android/sdk
+        sudo unzip commandlinetools.zip -d /usr/local/lib/android/sdk/cmdline-tools
+        sudo mv /usr/local/lib/android/sdk/cmdline-tools/cmdline-tools /usr/local/lib/android/sdk/cmdline-tools/latest
+        yes | sudo /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager --licenses
+        sudo /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager "platform-tools" "build-tools;30.0.3" "platforms;android-30"
 
     - name: Create local.properties file
-      run: echo "sdk.dir=/opt/android-sdk" > local.properties
+      run: echo "sdk.dir=/usr/local/lib/android/sdk" > local.properties
 
     - name: Export ANDROID_SDK_ROOT
-      run: echo "ANDROID_SDK_ROOT=/opt/android-sdk" >> $GITHUB_ENV
-
-    - name: Set version
-      id: vars
-      run: echo "VERSION=$(date +%Y%m%d%H%M%S)-${GITHUB_SHA::7}" >> $GITHUB_ENV
+      run: echo "ANDROID_SDK_ROOT=/usr/local/lib/android/sdk" >> $GITHUB_ENV
 
     - name: Deploy to App Engine
-      run: |
-        gcloud app deploy app.yaml --quiet --version=$VERSION --no-promote
+      uses: google-github-actions/deploy-appengine@v2
+      with:
+        project_id: ${{ secrets.GCP_PROJECT_ID }}
+        deliverables: app.yaml
+        promote: true
