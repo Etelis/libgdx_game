@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,6 +18,11 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
+
+    - name: Authenticate to Google Cloud
+      uses: google-github-actions/auth@v0
+      with:
+        credentials_json: ${{ secrets.GCP_SA_KEY }}
 
     - name: Install Android SDK and Tools
       run: |
@@ -38,33 +43,6 @@ jobs:
 
     - name: Build with Gradle
       run: ./gradlew clean assemble -x test --build-cache --quiet
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    permissions:
-      contents: 'read'
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Authenticate to Google Cloud
-      id: auth
-      uses: google-github-actions/auth@v0
-      with:
-        credentials_json: ${{ secrets.GCP_SA_KEY }}
-
-    - name: Set up Cloud SDK
-      uses: google-github-actions/setup-gcloud@v0.2.1
-      with:
-        version: 'latest'
-        export_default_credentials: true
-
-    - name: Download build artifacts from GCS
-      run: |
-        gsutil cp gs://libgdx_game/builds/app-release-<YOUR_UPLOADED_VERSION>.apk .
 
     - name: Deploy to App Engine
       run: |
