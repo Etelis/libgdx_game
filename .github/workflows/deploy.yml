@@ -26,6 +26,13 @@ jobs:
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         project_id: ${{ secrets.GCP_PROJECT }}
 
+    - name: Authenticate with GCP
+      run: |
+        echo "${{ secrets.GCP_SA_KEY }}" > ${HOME}/gcloud-service-key.json
+        gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
+        gcloud config set project ${{ secrets.GCP_PROJECT }}
+        gcloud config set account $(gcloud config get-value account)
+
     - name: Set version
       id: vars
       run: echo "VERSION=$(date +%Y%m%d%H%M%S)-${GITHUB_SHA::7}" >> $GITHUB_ENV
