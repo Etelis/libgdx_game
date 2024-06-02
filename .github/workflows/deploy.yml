@@ -32,25 +32,26 @@ jobs:
 
     - name: Create necessary directories in deploy
       run: |
-        mkdir -p deploy/core
         mkdir -p deploy/android
+        mkdir -p deploy/core
         mkdir -p deploy/desktop
         mkdir -p deploy/html
         mkdir -p deploy/gradle/wrapper
 
     - name: Copy necessary files to deploy directory
       run: |
-        cp -r android deploy/
-        cp -r core deploy/
-        cp -r desktop deploy/
-        cp -r html deploy/
+        cp -r android/* deploy/android/
+        cp -r core/* deploy/core/
+        cp -r desktop/* deploy/desktop/
+        cp -r html/* deploy/html/
         cp build.gradle deploy/
         cp gradle.properties deploy/
         cp gradlew deploy/
         cp gradlew.bat deploy/
         cp settings.gradle deploy/
         cp README.md deploy/
-        cp -r gradle/wrapper deploy/gradle/wrapper/
+        cp gradle/wrapper/gradle-wrapper.jar deploy/gradle/wrapper/
+        cp gradle/wrapper/gradle-wrapper.properties deploy/gradle/wrapper/
 
     - name: Create .gcloudignore file
       run: |
@@ -75,4 +76,4 @@ jobs:
 
     - name: Deploy to App Engine
       run: |
-        gcloud app deploy deploy/app.yaml --quiet --version=$VERSION --no-promote
+        gcloud app deploy deploy/app.yaml --quiet --version=$VERSION --no-promote --verbosity=debug
