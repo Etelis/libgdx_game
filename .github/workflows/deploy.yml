@@ -36,6 +36,7 @@ jobs:
         mkdir -p deploy/android
         mkdir -p deploy/desktop
         mkdir -p deploy/html
+        mkdir -p deploy/gradle/wrapper
 
     - name: Copy necessary files to deploy directory
       run: |
@@ -48,6 +49,7 @@ jobs:
         cp gradlew deploy/
         cp gradlew.bat deploy/
         cp settings.gradle deploy/
+        cp -r gradle/wrapper/* deploy/gradle/wrapper/
 
     - name: Create .gcloudignore file
       run: |
@@ -62,11 +64,7 @@ jobs:
         echo '!gradlew' >> deploy/.gcloudignore
         echo '!gradlew.bat' >> deploy/.gcloudignore
         echo '!settings.gradle' >> deploy/.gcloudignore
-
-    - name: List files in deploy directory
-      run: |
-        echo "Files in deploy directory:"
-        ls -R deploy
+        echo '!gradle/wrapper/' >> deploy/.gcloudignore
 
     - name: Set version
       id: vars
