@@ -36,7 +36,8 @@ jobs:
           /bin/bash -c "\
             chmod +x ./gradlew && \
             echo 'sdk.dir=/usr/local/lib/android/sdk' > android/local.properties && \
-            ./gradlew clean assemble -x test --build-cache --quiet"
+            ./gradlew clean assemble -x test --build-cache --quiet && \
+            chmod -R a+r /workspace/android/build"
 
     - name: Deploy to App Engine
       uses: google-github-actions/deploy-appengine@v2
