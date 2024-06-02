@@ -44,6 +44,12 @@ jobs:
         yes | sudo /usr/local/lib/android/sdk/cmdline-tools/latest/cmdline-tools/bin/sdkmanager --sdk_root=/usr/local/lib/android/sdk --licenses
         sudo /usr/local/lib/android/sdk/cmdline-tools/latest/cmdline-tools/bin/sdkmanager --sdk_root=/usr/local/lib/android/sdk "platform-tools" "build-tools;30.0.3" "platforms;android-30"
 
+    - name: Set up local.properties
+      run: echo "sdk.dir=/usr/local/lib/android/sdk" > $GITHUB_WORKSPACE/android/local.properties
+
+    - name: Grant execute permissions for gradlew
+      run: chmod +x ./gradlew
+
     - name: Build with Gradle
       run: ./gradlew clean assemble -x test --build-cache --quiet
 
