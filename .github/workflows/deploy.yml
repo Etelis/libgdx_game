@@ -30,10 +30,36 @@ jobs:
         version: 'latest'
         export_default_credentials: true
 
+    - name: Copy necessary files to deploy directory
+      run: |
+        cp -r core/* deploy/core/
+        cp -r android/* deploy/android/
+        cp -r desktop/* deploy/desktop/
+        cp -r html/* deploy/html/
+        cp build.gradle deploy/
+        cp gradle.properties deploy/
+        cp gradlew deploy/
+        cp gradlew.bat deploy/
+        cp settings.gradle deploy/
+      
+    - name: Create .gcloudignore file
+      run: |
+        echo '*' > deploy/.gcloudignore
+        echo '!app.yaml' >> deploy/.gcloudignore
+        echo '!core/' >> deploy/.gcloudignore
+        echo '!android/' >> deploy/.gcloudignore
+        echo '!desktop/' >> deploy/.gcloudignore
+        echo '!html/' >> deploy/.gcloudignore
+        echo '!build.gradle' >> deploy/.gcloudignore
+        echo '!gradle.properties' >> deploy/.gcloudignore
+        echo '!gradlew' >> deploy/.gcloudignore
+        echo '!gradlew.bat' >> deploy/.gcloudignore
+        echo '!settings.gradle' >> deploy/.gcloudignore
+
     - name: Set version
       id: vars
       run: echo "VERSION=$(date +%Y%m%d%H%M%S)-${GITHUB_SHA::7}" >> $GITHUB_ENV
 
     - name: Deploy to App Engine
       run: |
-        gcloud app deploy deploy/app.yaml --quiet --version=$VERSION --no-promote --verbosity=debug
+        gcloud app deploy deploy/app.yaml --quiet --version=$VERSION --no-promote
